@@ -1,12 +1,12 @@
 #include "bits/stdc++.h"
 using namespace std;
 #define ll long long
-double a, b, c, d;
+double n, m, a;
 
 int main() {
 	ios_base::sync_with_stdio(false);
 	cin.tie(NULL);
-	cin >> a;
-	printf("%.2lf", a>20 ? a*1.98 : a*1.68);
+	cin >> n;
+	cout << (50 + n / 3 == n / 1.2 ? "All" : (50 + n / 3 < n / 1.2 ? "Bike" : "Walk"));
 	return 0;
 }
