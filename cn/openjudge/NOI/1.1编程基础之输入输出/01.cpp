@@ -1,13 +1,12 @@
 #include "bits/stdc++.h"
 using namespace std;
 #define ll long long
-double r;
+int n, m, x, y, a, b, t;
 
 int main() {
 	ios_base::sync_with_stdio(false);
 	cin.tie(NULL);
 	
-	cin >> r;
-	printf("%.4lf %.4lf %.4lf", r * 2, M_PI * r * 2, M_PI * r * r);
+	printf("Hello, World!");
 	return 0;
 }
