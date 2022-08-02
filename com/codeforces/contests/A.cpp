@@ -1,42 +1,34 @@
 #include "bits/stdc++.h"
 using namespace std;
 #define ll long long
-int x, y, a, b, t;
-int n[51], m[51];
+int t, n, h, m;
 
 int main() {
 	ios_base::sync_with_stdio(false);
 	cin.tie(NULL);
-
-	scanf("%d",&t);
-	while(t--) {
-		scanf("%d %d",&a,&b);
-		for(int i=1; i<=a; i++) {
-			scanf("%1d",n+i);
-		}
-		for(int i=1; i<=b; i++) {
-			scanf("%1d",m+i);
-		}
-		bool flag = true;
-		for(int i=0; i<b-1; i++) {
-			if(n[a-i]!=m[b-i]) {
-				cout << "NO" << endl;
-				flag = false;
-				break;
+	
+	cin >> t;
+	while (t--) {
+		cin >> n >> h >> m;
+		int ah=24, am=59;
+		for (int i = 0; i < n; ++i)
+		{
+			int hh,mm;
+			cin >> hh >> mm;
+			hh-=h;
+			mm-=m;
+			if (mm<0) {
+				mm+=60;
+				hh-=1;
+			}
+			if (hh<0) {
+				hh+=24;
+			}
+			if (ah>hh||(ah==hh&&am>mm)) {
+				ah=hh;am=mm;
 			}
 		}
-		if(flag){
-			for(int i=b-1; i<a; i++) {
-				if(n[a-i]==m[1]) {
-					cout << "YES" << endl;
-					flag = false;
-					break;
-				}
-			}
-		}
-		if(flag){
-			cout << "NO" << endl;
-		}
+		cout<<ah<<' '<<am<<endl;
 	}
 	return 0;
 }
