@@ -1,66 +1,83 @@
 #include<bits/stdc++.h>
 using namespace std;
-struct Student {
-	int c=-1,m,e,a;
-	int ci,mi,ei,ai;
-} stus[1000000];
-int cr[2000],mr[2000],er[2000],ar[2000];
-bool cmpa(int a,int b) {
-	return stus[a].a>stus[b].a;
+struct Node {
+	int number;
+	int c,m,e,a;
+	int rank[4];
+};
+bool cmp_a(struct Node tmp1,struct Node tmp2) {
+	return tmp1.a>tmp2.a;
 }
-bool cmpe(int a,int b) {
-	if(stus[a].e==stus[b].e)
-		return cmpa(a,b);
-	return stus[a].e>stus[b].e;
+bool cmp_e(struct Node tmp1,struct Node tmp2) {
+	return tmp1.e>tmp2.e;
 }
-bool cmpm(int a,int b) {
-	if(stus[a].m==stus[b].m)
-		return cmpe(a,b);
-	return stus[a].m>stus[b].m;
+bool cmp_m(struct Node tmp1,struct Node tmp2) {
+	return tmp1.m>tmp2.m;
 }
-bool cmpc(int a,int b) {
-	if(stus[a].c==stus[b].c)
-		return cmpm(a,b);
-	return stus[a].c>stus[b].c;
+bool cmp_c(struct Node tmp1,struct Node tmp2) {
+	return tmp1.c>tmp2.c;
 }
 int main() {
-	int n,m;
+	int n,m,tmp,cnt;
 	cin>>n>>m;
+	struct Node node[n];
 	for(int i=0; i<n; i++) {
-		int id;
-		cin>>id;
-		cin>>stus[id].c>>stus[id].m>>stus[id].e;
-		stus[id].a=(stus[id].c+stus[id].m+stus[id].e)/3;
-		cr[i]=mr[i]=er[i]=ar[i]=id;
+		cin>>node[i].number>>node[i].c>>node[i].m>>node[i].e;
+		node[i].a=(node[i].c+node[i].m+node[i].e)/3;
 	}
-	stable_sort(cr,cr+n,cmpc);
-	for(int i=0; i<n; i++)
-		stus[cr[i]].ci=i+1;
-	stable_sort(mr,mr+n,cmpm);
-	for(int i=0; i<n; i++)
-		stus[mr[i]].mi=i+1;
-	stable_sort(er,er+n,cmpe);
-	for(int i=0; i<n; i++)
-		stus[er[i]].ei=i+1;
-	stable_sort(ar,ar+n,cmpa);
-	for(int i=0; i<n; i++)
-		stus[ar[i]].ai=i+1;
-	while(m--) {
-		int k;
-		cin>>k;
-		if(stus[k].c==-1)
-			cout<<"N/A"<<endl;
-		else {
-			int f=min(min(stus[k].ci,stus[k].mi),min(stus[k].ei,stus[k].ai));
-			if(stus[k].ai==f)
-				cout<<f<<" A\n";
-			else if(stus[k].ci==f)
-				cout<<f<<" C\n";
-			else if(stus[k].mi==f)
-				cout<<f<<" M\n";
-			else //(stus[k].ei==f)
-				cout<<f<<" E\n";
+
+	tmp=1; cnt=1;
+	sort(node,node+n,cmp_a);
+	for(int i=0; i<n; i++) {
+		node[i].rank[0]=tmp;
+		if(i!=n-1&&node[i].a!=node[i+1].a) {
+			tmp+=cnt; cnt=1;
+		} else cnt++;
+	}
+
+	tmp=1; cnt=1;
+	sort(node,node+n,cmp_c);
+	for(int i=0; i<n; i++) {
+		node[i].rank[1]=tmp;
+		if(i!=n-1&&node[i].c!=node[i+1].c) {
+			tmp+=cnt; cnt=1;
+		} else cnt++;
+	}
+
+	tmp=1; cnt=1;
+	sort(node,node+n,cmp_m);
+	for(int i=0; i<n; i++) {
+		node[i].rank[2]=tmp;
+		if(i!=n-1&&node[i].m!=node[i+1].m) {
+			tmp+=cnt; cnt=1;
+		} else cnt++;
+	}
+
+	tmp=1; cnt=1;
+	sort(node,node+n,cmp_e);
+	for(int i=0; i<n; i++) {
+		node[i].rank[3]=tmp;
+		if(i!=n-1&&node[i].e!=node[i+1].e) {
+			tmp+=cnt; cnt=1;
+		}else cnt++;
+	}
+	for(int i=0; i<m; i++) {
+		int temp;
+		cin>>temp;
+		int flag=0;
+		for(int j=0; j<n; j++) {
+			if(node[j].number==temp) {
+				int pos=min_element(node[j].rank,node[j].rank+4)-node[j].rank;
+				cout<<*min_element(node[j].rank,node[j].rank+4)<<" ";
+				if(pos==0) cout<<'A';
+				else if(pos==1) cout<<'C';
+				else if(pos==2) cout<<'M';
+				else if(pos==3) cout<<'E';
+				cout<<endl;
+				flag=1;
+				break;
+			}
 		}
+		if(flag==0) cout<<"N/A"<<endl;
 	}
-	return 0;
 }
