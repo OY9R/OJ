@@ -33,7 +33,7 @@ int main() {
 			}
 		}
 		if(flag)continue;
-		cost=(c1>>1)*y;
+		cost=(c1/2)*y;
 		cout<<cost<<endl;
 	}
 	return 0;
