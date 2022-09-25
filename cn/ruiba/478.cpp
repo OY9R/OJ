@@ -14,9 +14,10 @@ int main() {
 		cnt[m[i]]++;
 		mmax=mmax<m[i]?m[i]:mmax;
 	}
-	for(int i=0;i<n;i++)
-		for(int j=m[i];j<=mmax;j+=m[i])
-			ans[j]+=cnt[m[i]];
+	for(int i=1;i<=mmax;i++)
+		if(cnt[i])
+			for(int j=i;j<=mmax;j+=i)
+				ans[j]+=cnt[i];
 	for(int i=0;i<n;i++)
 		cout<<ans[m[i]]-1<<endl;
 	return 0;
