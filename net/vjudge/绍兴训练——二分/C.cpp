@@ -23,12 +23,12 @@ int main() {
 	cin>>n>>d>>k;
 	for(int i=1; i<=n; i++)
 		cin>>x[i]>>s[i];
-	ll l=0,r=INT_MAX>>1,ans;
+	ll l=0,r=1005,ans=-1;
 	while(l<=r) {
 		ll m=(l+r)>>1;
 		if(check(m))ans=m,r=m-1;
 		else l=m+1;
 	}
-	cout<<l<<endl;
+	cout<<ans<<endl;
 	return 0;
 }
