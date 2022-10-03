@@ -1,32 +1,27 @@
 #include<bits/stdc++.h>
 using namespace std;
-typedef long long ll;
-const int N = 1e8 + 7;
-int primes[N], cnt=1;
-bool st[N];
-
-void getPrimes(int n) {
-    primes[0]=2;
-    for(int i=3;i<=n;i+=2){
-        if(!st[i])
-            primes[cnt++]=i;
-        for(int j=1;j<cnt&&i*primes[j]<=n;j++){
-            st[i*primes[j]]=true;
-            if(i%primes[j]==0)break;
+bool np[50<<20];
+int ps[6<<20];
+int get() {
+    int k=0;
+    char c=getchar();
+    for(;c<'0'||c>'9';c=getchar());
+    for(;c>='0'&&c<='9';c=getchar())
+        k=(k<<1)+(k<<3)+(c^48);
+    return k;
+}
+int main(){
+    ps[0]=2;
+    ps[1]=3;
+    int pn=2,n=get(),q=get(),k;
+    for(int i=5,b=0;i<=n;i+=2+2*b,b=!b){
+        if(!np[i-3>>1])
+            ps[pn++]=i;
+        for(int j=2;j<pn&&i*ps[j]<=n;j++){
+            np[i*ps[j]-3>>1]=1;
+            if(i%ps[j]==0)break;
         }
     }
-}
-int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(0);
-    cout.tie(0);
-    int n,q;
-    cin >> n >> q;
-    getPrimes(n);
-    while(q--) {
-        int m;
-        cin>>m;
-        cout<<primes[m-1]<<'\n';
-    }
+    for(;q--;cout<<ps[k-1]<<'\n')k=get();
     return 0;
 }
