@@ -37,7 +37,7 @@ void dfs(int sp){
 		for(int i=tpath.size()-2;i>=0;i--)
 			if(moutt+C[tpath[i]]<Cmax/2)
 				mint+=Cmax/2-(moutt+C[tpath[i]]),moutt=0;
-			else moutt+=abs(C[tpath[i]]-Cmax/2);
+			else moutt+=C[tpath[i]]-Cmax/2;
 		if(mint<mmin)
 			mmin=mint,path=tpath,mout=moutt;
 		else if(mint==mmin&&mout>moutt)

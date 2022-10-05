@@ -10,8 +10,7 @@ int main() {
 	srand(seed);
 	cout<<1<<'\n';
 	for(int i=0;i<6;i++)
-	cout<<rand()+1<<' ';
-	cout<<'\n';
+	
 
 	return 0;
 }
