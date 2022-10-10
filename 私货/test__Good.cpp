@@ -1,27 +1,22 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
+
 int main() {
-std::ios::sync_with_stdio(false);
-cin.tie(0);
-    string s;
-    while(getline(cin,s)&&s[0]!='.'){
-        int len=s.size();
-        int j=1;
-        for(int i=0;i<len;i++){
-            if(len%(i+1)==0){
-                bool flag=true;
-                for(;j<len;j++){
-                    if(s[j%(i+1)]!=s[j]){
-                        flag=false;
-                        break;
-                    }
-                }
-                if(flag){
-                    cout<<len/(i+1)<<endl;
-                    break;
-                }
-            }
-        }
+    int n;
+    cin >> n;
+    vector<int> odd, even;
+    for(int i = 0; i < n; i++) {
+        int a;
+        cin >> a;
+        if(a & 1)
+            odd.push_back(a);
+        else
+            even.push_back(a);
     }
-    return 0;
+    sort(odd.rbegin(), odd.rend());
+    sort(even.rbegin(), even.rend());
+    int mx = -1;
+    if(odd.size() >= 2) mx = max(mx, odd[0] + odd[1]);
+    if(even.size() >= 2) mx = max(mx, even[0] + even[1]);
+    cout << mx << endl;
 }

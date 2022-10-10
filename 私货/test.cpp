@@ -1,23 +1,40 @@
 #include <bits/stdc++.h>
 using namespace std;
-string s;
 int main() {
-	while(getline(cin,s) && s!=".") {
-		int cnt[128] = {0};
-		int g = 0,n = s.size();
-		int c;
-		for(auto c : s)
-			cnt[c]++;
-		for(auto c : cnt)
-			g = __gcd(g,c);
-		for(int i=1,j,k; i<n; i++) { //(不写条件空串会死循环)
-			if(g%i == 0) {
-				for(j=0,k=n/(g/i); j+k<n && s[j] == s[j+k]; j++);//如果k不是循环节长就会提前结束
-				if(j+k == n) {//这个if应该放外面，判断for循环是否提前结束
-					cout<<g/i<<'\n';
-					break;
-				}
+	vector<int> s;
+	int n;
+	cin>>n;
+	for(int i=0;i<n;i++){
+		int t;
+		cin>>t;
+		s.push_back(t);
+	}
+	if(s.size()<2){
+		cout<<-1;
+		return 0;
+	}
+	//cout<<*(s.begin())<<*(next(s.begin()));
+	if(s.size()==2&&s[0]%2+s[1]%2==1){
+		cout<<-1;
+		return 0;
+	}
+	int max11=-1,max12=-1,max21=-1,max22=-1;
+	for(auto it=s.begin();it!=s.end();it=next(it)){
+		if(*it&1){
+			if(max11<*it){
+				max12=max11;
+				max11=*it;
+			}
+		}else{
+			if(max21<*it){
+				max22=max21;
+				max21=*it;
 			}
 		}
 	}
+	//cout<<max11<<max12<<max21<<max22;
+	if(max12!=-1)max12+=max11;
+	if(max22!=-1)max22+=max21;
+	cout<<max(max12,max22);
+	return 0;
 }

@@ -8,15 +8,13 @@ int main() {
 	int seed;
 	cin >> seed;//读取种子
 	srand(seed);
-	string s;
-	int n=rand()%20;
-	int m=rand()%20;
+	int n=10;
+	set<int> s;
 	for(int i=0;i<n;i++)
-		s+=(char)('a'+rand()%26);
-	for(int i=0;i<m;i++)
-		cout<<s;
-	cout<<"\n.\n";
-	
-
+		s.insert(rand()%n);
+	cout<<s.size()<<endl;
+	for(auto it=s.begin();it!=s.end();it=next(it))
+		cout<<*it<<' ';
+	cout<<endl;
 	return 0;
 }
