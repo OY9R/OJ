@@ -1,22 +1,38 @@
 #include <bits/stdc++.h>
 using namespace std;
-
-int main() {
-    int n;
-    cin >> n;
-    vector<int> odd, even;
-    for(int i = 0; i < n; i++) {
-        int a;
-        cin >> a;
-        if(a & 1)
-            odd.push_back(a);
-        else
-            even.push_back(a);
+int main(){
+  int t;
+  cin >> t;
+  for (int i = 0;  i < t; i++){
+    int m;
+    cin >> m;
+    vector<int> p(m);
+    for (int j = 0; j < m; j++){
+      cin >> p[j];
     }
-    sort(odd.rbegin(), odd.rend());
-    sort(even.rbegin(), even.rend());
-    int mx = -1;
-    if(odd.size() >= 2) mx = max(mx, odd[0] + odd[1]);
-    if(even.size() >= 2) mx = max(mx, even[0] + even[1]);
-    cout << mx << endl;
+    vector<int> mn(m * 2 - 1), mx(m * 2 - 1);
+    for (int j = 0; j < m; j++){
+      mn[m - 1 + j] = p[j];
+      mx[m - 1 + j] = p[j];
+    }
+    for (int j = m - 2; j >= 0; j--){
+      mn[j] = min(mn[j * 2 + 1], mn[j * 2 + 2]);
+      mx[j] = max(mx[j * 2 + 1], mx[j * 2 + 2]);
+    }
+    bool ok = true;
+    int ans = 0;
+    for (int j = 0; j < m - 1; j++){
+      if (mx[j * 2 + 1] < mn[j * 2 + 2]){
+      } else if (mx[j * 2 + 2] < mn[j * 2 + 1]){
+        ans++;
+      } else {
+        ok = false;
+      }
+    }
+    if (!ok){
+      cout << -1 << endl;
+    } else {
+      cout << ans << endl;
+    }
+  }
 }

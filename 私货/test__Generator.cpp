@@ -8,13 +8,16 @@ int main() {
 	int seed;
 	cin >> seed;//读取种子
 	srand(seed);
-	int n=10;
-	set<int> s;
+	int n=1<<(rand()%10);
+	vector<int> m(n);
 	for(int i=0;i<n;i++)
-		s.insert(rand()%n);
-	cout<<s.size()<<endl;
-	for(auto it=s.begin();it!=s.end();it=next(it))
-		cout<<*it<<' ';
+		m[i]=i+1;
+	for(int i=0;i<n;i++)
+		swap(m[i],m[rand()%n]);
+	cout<<1<<endl;
+	cout<<n<<endl;
+	for(int i=0;i<n;i++)
+		cout<<m[i]<<' ';
 	cout<<endl;
 	return 0;
 }

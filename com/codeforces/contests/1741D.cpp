@@ -3,14 +3,8 @@ using namespace std;
 vector<int> a;
 int cnt=0;
 pair<int,int> dfs(int l,int r) {
-	if(r-l==2) {
-		if(a[l]==a[l+1]+1){
-			cnt++;
-			return {a[l+1],a[l]};
-		}
-		if(a[l]+1==a[l+1])
-			return {a[l],a[l+1]};
-		return {-1,-1};
+	if(r-l==1) {
+		return {a[l],a[l]};
 	}
 	int mid=(l+r)/2;
 	auto ll=dfs(l,mid);
@@ -36,10 +30,6 @@ int main() {
 		a.resize(n+1);
 		for(int i=1; i<=n; i++)
 			cin>>a[i];
-		if(n==1){
-			cout<<0<<endl;
-			continue;
-		}
 		cnt=0;
 		auto res = dfs(1,n+1);
 		if(res.first==-1)
