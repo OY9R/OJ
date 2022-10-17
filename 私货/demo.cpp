@@ -1,27 +1,32 @@
 #include <bits/stdc++.h>
 using namespace std;
-#define ll long long
-int main() {
-    double a, b, d;
-    char c;
-    cin >> a >> b >> c;
-    if(c == '+') {
-        d = a + b;
-        cout << d << endl;
-    } else if(c == '-') {
-        d = a - b;
-        cout << d << endl;
-    } else if(c == '*') {
-        d = a * b;
-        cout << d << endl;
-    } else if(c == '/') {
-        if(b == 0)
-            cout << "Divided by zero!" << endl;
-        else {
-            d = a / b;
-            cout << d << endl;
+
+struct Node {
+    int data;
+    struct Node *next;
+};
+
+void findMindata(Node *head) {
+    Node *minnode=head->next,*p=minnode;
+    int mindata=minnode->data;
+    while(p->next!=NULL) {
+        p=p->next;
+        if(p->data<mindata) {
+            mindata=p->data;
+            minnode=p;
         }
-    } else
-        cout << "Invalid operator!" << endl;
+    }
+    if(minnode->next!=NULL) {
+        if(mindata%2)
+            swap(minnode->data,minnode->next->data);
+        else{
+            p=minnode->next;
+            minnode->next=minnode->next->next;
+            free(p);
+        }
+    }
+}
+
+int main() {
     return 0;
 }
