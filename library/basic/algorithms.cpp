@@ -1,5 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
+typedef long long ll;
 void quick_sort(int q[],int l,int r) {
 	if(l>=r) return;
 	int i=l-1,j=r+1,x=q[l+r>>1];
@@ -82,6 +83,16 @@ vector<int> div(vector<int> &A,int b,int &r){
 	while(C.size()>1&&C.back()==0)C.pop_back();
 	return C;
 }
+int qmi(int m, int k, int p){
+	int res=1%p,t=m;
+	while(k){
+		if(k&1)res=res*t%p;
+		t=t*t%p;
+		k>>=1;
+	}
+	return res;
+}
+
 int get_bit(int n,int k){
 	return n>>k&1;
 }
@@ -115,4 +126,22 @@ void merge(vector<pair<int,int>> &segs){
 		}else ed=max(ed,seg.second);
 	if(st!=-2e9)res.push_back({st,ed});
 	segs=res;
+}
+vector<int> kmp(string s,string p){
+	vector<int> ne(s.length());
+	vector<int> res;
+	for(int i=2,j=0;i<=p.length();i++){
+		while(j&&p[i]!=p[j+1])j=ne[j];
+		if(p[i]==p[j+1])j++;
+		ne[i]=j;
+	}
+	for(int i=1,j=0;i<=s.length();i++){
+		while(j&&s[i]!=p[j+1])j=ne[j];
+		if(s[i]==p[j+1])j++;
+		if(j==p.length()){
+			j=ne[j];
+			res.push_back(i);
+		}
+	}
+	return res;
 }
