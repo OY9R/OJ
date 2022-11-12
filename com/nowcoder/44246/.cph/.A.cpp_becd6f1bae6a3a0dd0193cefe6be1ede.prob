@@ -1,0 +1,1 @@
+{"name":"Local: A","url":"d:\\desktop\\OJ\\com\\nowcoder\\44246\\A.cpp","tests":[{"id":1667019793301,"input":"A","output":"B"},{"id":1667019801083,"input":"Z","output":"non−existent"},{"id":1667019829817,"input":"a","output":"b"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\desktop\\OJ\\com\\nowcoder\\44246\\A.cpp","group":"local","local":true}
