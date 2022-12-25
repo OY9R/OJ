@@ -1,0 +1,1 @@
+{"name":"Local: abc048-E","url":"d:\\desktop\\OJ\\com\\atcoder\\abc048-E.cpp","tests":[{"id":1671879735679,"input":"4 2\n1 3\n4 3\n3 3\n1 2\n1 3\n2 3\n5 2\n1 2\n3 5\n999 0\n0","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\desktop\\OJ\\com\\atcoder\\abc048-E.cpp","group":"local","local":true}
