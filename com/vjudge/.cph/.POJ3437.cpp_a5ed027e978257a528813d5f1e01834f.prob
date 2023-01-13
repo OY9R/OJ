@@ -1,0 +1,1 @@
+{"name":"Local: POJ3437","url":"d:\\desktop\\OJ\\com\\vjudge\\POJ3437.cpp","tests":[{"id":1673169883433,"input":"dudduduudu\nddddduuuuu\ndddduduuuu\ndddduuuduu\n#","output":"Tree 1: 2 => 4\nTree 2: 5 => 5\nTree 3: 4 => 5\nTree 4: 4 => 4"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\desktop\\OJ\\com\\vjudge\\POJ3437.cpp","group":"local","local":true}

@@ -1,0 +1,1 @@
+{"name":"Local: 101522A","url":"d:\\desktop\\OJ\\com\\codeforces\\101522A.cpp","tests":[{"id":1673435625004,"input":"12\n31 28 31 30 31 30 31 31 30 31 30 31\n","output":"132\n"},{"id":1673435630998,"input":"3\n5 1 1","output":"0"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\desktop\\OJ\\com\\codeforces\\101522A.cpp","group":"local","local":true}
