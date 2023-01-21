@@ -42,15 +42,6 @@ status bfs(){
         status u=q.front();q.pop();
         //cout<<u.n<<' '<<u.s<<' '<<u.t<<endl;
         if(u.n==r&&u.s==1<<(r-1))return u;
-        int r=R[u.n];
-        while(r>0){
-            if(!st[u.n][u.s^(r&-r)]){
-                st[u.n][u.s^(r&-r)]=true;
-                status tmp={u.n,u.s^(r&-r),u.t+1};
-                q.push(tmp);
-                path[tmp]=u;
-            }r^=r&-r;
-        }
         int g=G[u.n];
         while(g>0){
             int to=(int)log2(g&-g)+1;
@@ -60,6 +51,15 @@ status bfs(){
                 q.push(tmp);
                 path[tmp]=u;
             }g^=g&-g;
+        }
+        int r=R[u.n];
+        while(r>0){
+            if(!st[u.n][u.s^(r&-r)]){
+                st[u.n][u.s^(r&-r)]=true;
+                status tmp={u.n,u.s^(r&-r),u.t+1};
+                q.push(tmp);
+                path[tmp]=u;
+            }r^=r&-r;
         }
     }
     status ret={0,0,-1};
@@ -83,7 +83,7 @@ void solve(){
     }
     status ans=bfs();
     cout<<"Villa #"<<++tt<<"\nThe problem can";
-    if(ans.t==-1)cout<<"not be solved.\n";
+    if(ans.t==-1)cout<<"not be solved.\n\n";
     else{cout<<" be solved in "<<ans.t<<" steps:\n";print(ans);cout<<endl;}
 }
 int main(){
