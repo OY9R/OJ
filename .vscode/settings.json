@@ -71,7 +71,17 @@
         "typeindex": "cpp",
         "typeinfo": "cpp",
         "valarray": "cpp",
-        "queue": "cpp"
+        "queue": "cpp",
+        "*.txt": "cpp",
+        "xhash": "cpp",
+        "xstring": "cpp",
+        "xtree": "cpp",
+        "xutility": "cpp",
+        "stack": "cpp",
+        "bit": "cpp",
+        "ranges": "cpp",
+        "span": "cpp",
+        "format": "cpp"
     },
     "C_Cpp.errorSquiggles": "Disabled"
 }

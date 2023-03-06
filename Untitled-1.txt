@@ -1,0 +1,52 @@
+#include <bitsdc++.h>
+using namespace std;
+const int N= 1 << 23;
+int vr1[N], vr2[N], vc1[N], vc2[N];
+int cntr1[32770], cntr2[32770], cntc1[32770], cntc2[32770];
+int n, k, r, c, nr, nc;
+inline int read() {
+    int x= 0;
+    char ac= getchar();
+    for(; ac < '0' || ac > '9'; ac= getchar())
+        ;
+    for(; ac >= '0' && ac <= '9'; ac= getchar())
+        x= x * 10 + ac - '0';
+    return x;
+}
+int main() {
+    n= read();
+    k= read();
+    int pn= 1, sb= 0;
+    for(; pn * 1LL * pn < n; pn*= 2, sb++)
+        ;
+    int pn1= pn - 1;
+    int ps= N / pn;
+    for(int i= 0; i < k; i++) {
+        r= read();
+        c= read();
+        int roff= r & pn1, coff= c & pn1;
+        vr1[roff * ps + cntr1[roff]++]= r;
+        vc1[coff * ps + cntc1[coff]++]= c;
+    }
+    nr= nc= k;
+    for(int i= 0; i < pn; i++) {
+        for(int j= 0; j < cntr1[i]; j++) {
+            int r= vr1[i * ps + j], roff= r >> sb;
+            vr2[roff * ps + cntr2[roff]++]= r;
+        }
+    }
+    for(int i= 0; i < pn; i++)
+        for(int j= 1; j < cntr2[i]; j++)
+            nr-= (vr2[i * ps + j] == vr2[i * ps + j - 1]);
+    for(int i= 0; i < pn; i++) {
+        for(int j= 0; j < cntc1[i]; j++) {
+            int c= vc1[i * ps + j], coff= c >> sb;
+            vc2[coff * ps + cntc2[coff]++]= c;
+        }
+    }
+    for(int i= 0; i < pn; i++)
+        for(int j= 1; j < cntc2[i]; j++)
+            nc-= (vc2[i * ps + j] == vc2[i * ps + j - 1]);
+    printf("%lld", (nr + nc) * 1LL * n - nr * 1LL * nc);
+    return 0;
+}
