@@ -1,0 +1,1 @@
+{"name":"Local: A","url":"d:\\desktop\\OJ\\com\\nowcoder\\40007A\\A.cpp","tests":[{"id":1679895958682,"input":"","output":"printf(\"Hello world!\n\");\ncout << \"Hello world!\" << endl;"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\desktop\\OJ\\com\\nowcoder\\40007A\\A.cpp","group":"local","local":true}
