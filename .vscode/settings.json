@@ -81,7 +81,8 @@
         "bit": "cpp",
         "ranges": "cpp",
         "span": "cpp",
-        "format": "cpp"
+        "format": "cpp",
+        "xlocinfo": "cpp"
     },
     "C_Cpp.errorSquiggles": "Disabled"
 }

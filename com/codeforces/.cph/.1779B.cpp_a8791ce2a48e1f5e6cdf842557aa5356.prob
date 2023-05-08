@@ -1,0 +1,1 @@
+{"name":"B. MKnez's ConstructiveForces Task","group":"Hello 2023","url":"https://codeforces.com/contest/1779/problem/B","interactive":false,"memoryLimit":256,"timeLimit":1000,"tests":[{"id":1672757497958,"input":"7\n2\n3\n4\n5\n6\n7\n8","output":"YES\n9 5\nNO"}],"input":{"type":"stdin"},"output":{"type":"stdout"},"srcPath":"d:\\desktop\\OJ\\1779B.cpp"}

@@ -1,0 +1,1 @@
+{"name":"Local: 1768D","url":"d:\\desktop\\OJ\\1768D.cpp","tests":[{"id":1672933512577,"input":"4\n2\n2 1\n2\n1 2\n4\n3 4 1 2\n4\n2 4 3 1","output":"0\n1\n3\n1"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\desktop\\OJ\\1768D.cpp","group":"local","local":true}

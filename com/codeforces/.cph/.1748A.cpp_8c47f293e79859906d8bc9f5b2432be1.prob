@@ -1,0 +1,1 @@
+{"name":"A. The Ultimate Square","group":"Codeforces Round #833 (Div. 2)","url":"https://codeforces.com/contest/1748/problem/A","interactive":false,"memoryLimit":256,"timeLimit":1000,"tests":[{"id":1668264131990,"input":"3\n2\n5\n197654321","output":"1\n3\n98827161"}],"input":{"type":"stdin"},"output":{"type":"stdout"},"srcPath":"d:\\desktop\\OJ\\1748A.cpp"}
