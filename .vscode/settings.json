@@ -82,7 +82,10 @@
         "ranges": "cpp",
         "span": "cpp",
         "format": "cpp",
-        "xlocinfo": "cpp"
+        "xlocinfo": "cpp",
+        "ios": "cpp",
+        "stop_token": "cpp",
+        "xiosbase": "cpp"
     },
     "C_Cpp.errorSquiggles": "Disabled"
 }
