@@ -13,20 +13,19 @@ typedef vector<long long> VL;
 typedef pair<int,int> PII;
 typedef long long ll;
 const int INF=0x3f3f3f3f,mod=1e9+7;
-int g[1001][1001];
 void solve(){
-    int n,m,ans=0;cin>>n>>m;
-    rep(i,0,n)rep(j,0,m)cin>>g[i][j];
-    for(int i=n%3==0;i<n;i+=3){
-        for(int j=m%3==0;j<m;j+=3){
-            ans+=g[i][j];
-        }
-    }
-    cout<<ans<<endl;
+	int n;cin>>n;
+    VI a(n);
+    rep(i,0,n)cin>>a[i];
+    int m=a[0],neg=0;
+    rep(i,1,n)m=max(m,a[i]);
+    rep(i,0,n)if(a[i]<0)neg=a[i];
+    cout<<(neg?neg:m)<<endl;
 }
 int main(){
-    ios::sync_with_stdio(false);
-    cin.tie(0);cout.tie(0);
-    solve();
-    return 0;
+	ios::sync_with_stdio(false);
+	cin.tie(0);cout.tie(0);
+	int n;cin>>n;
+	while(n--)solve();
+	return 0;
 }

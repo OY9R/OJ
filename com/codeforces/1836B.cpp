@@ -13,18 +13,14 @@ typedef vector<long long> VL;
 typedef pair<int,int> PII;
 typedef long long ll;
 const int INF=0x3f3f3f3f,mod=1e9+7;
-ll cal(ll n){
-    if(n<0)return 0;
-    return 1+(n<<1)*(n-1);
-}
 void solve(){
-    ll n,k;cin>>n>>k;
-    cout<<cal(n+1)-cal(n-k)<<endl;
+    ll n,k,g;cin>>n>>k>>g;
+    cout<<min(n*(g/2-1+g%2)/g*g,k*g)<<endl;
 }
 int main(){
-    ios::sync_with_stdio(false);
-    cin.tie(0);cout.tie(0);
-    int n;cin>>n;
-    while(n--)solve();
-    return 0;
+	ios::sync_with_stdio(false);
+	cin.tie(0);cout.tie(0);
+	int n;cin>>n;
+	while(n--)solve();
+	return 0;
 }
