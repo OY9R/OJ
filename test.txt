@@ -1,0 +1,162 @@
+正在比较文件 right.txt 和 WRONG.TXT
+FC: 找不到差异
+
+正在比较文件 right.txt 和 WRONG.TXT
+FC: 找不到差异
+
+正在比较文件 right.txt 和 WRONG.TXT
+FC: 找不到差异
+
+正在比较文件 right.txt 和 WRONG.TXT
+FC: 找不到差异
+
+正在比较文件 right.txt 和 WRONG.TXT
+FC: 找不到差异
+
+正在比较文件 right.txt 和 WRONG.TXT
+FC: 找不到差异
+
+正在比较文件 right.txt 和 WRONG.TXT
+FC: 找不到差异
+
+正在比较文件 right.txt 和 WRONG.TXT
+FC: 找不到差异
+
+正在比较文件 right.txt 和 WRONG.TXT
+FC: 找不到差异
+
+正在比较文件 right.txt 和 WRONG.TXT
+FC: 找不到差异
+
+正在比较文件 right.txt 和 WRONG.TXT
+FC: 找不到差异
+
+正在比较文件 right.txt 和 WRONG.TXT
+FC: 找不到差异
+
+正在比较文件 right.txt 和 WRONG.TXT
+FC: 找不到差异
+
+正在比较文件 right.txt 和 WRONG.TXT
+FC: 找不到差异
+
+正在比较文件 right.txt 和 WRONG.TXT
+FC: 找不到差异
+
+正在比较文件 right.txt 和 WRONG.TXT
+FC: 找不到差异
+
+正在比较文件 right.txt 和 WRONG.TXT
+FC: 找不到差异
+
+正在比较文件 right.txt 和 WRONG.TXT
+FC: 找不到差异
+
+正在比较文件 right.txt 和 WRONG.TXT
+FC: 找不到差异
+
+正在比较文件 right.txt 和 WRONG.TXT
+FC: 找不到差异
+
+正在比较文件 right.txt 和 WRONG.TXT
+FC: 找不到差异
+
+正在比较文件 right.txt 和 WRONG.TXT
+FC: 找不到差异
+
+正在比较文件 right.txt 和 WRONG.TXT
+FC: 找不到差异
+
+正在比较文件 right.txt 和 WRONG.TXT
+FC: 找不到差异
+
+正在比较文件 right.txt 和 WRONG.TXT
+FC: 找不到差异
+
+正在比较文件 right.txt 和 WRONG.TXT
+FC: 找不到差异
+
+正在比较文件 right.txt 和 WRONG.TXT
+FC: 找不到差异
+
+正在比较文件 right.txt 和 WRONG.TXT
+FC: 找不到差异
+
+正在比较文件 right.txt 和 WRONG.TXT
+FC: 找不到差异
+
+正在比较文件 right.txt 和 WRONG.TXT
+FC: 找不到差异
+
+正在比较文件 right.txt 和 WRONG.TXT
+FC: 找不到差异
+
+正在比较文件 right.txt 和 WRONG.TXT
+FC: 找不到差异
+
+正在比较文件 right.txt 和 WRONG.TXT
+FC: 找不到差异
+
+正在比较文件 right.txt 和 WRONG.TXT
+FC: 找不到差异
+
+正在比较文件 right.txt 和 WRONG.TXT
+FC: 找不到差异
+
+正在比较文件 right.txt 和 WRONG.TXT
+FC: 找不到差异
+
+正在比较文件 right.txt 和 WRONG.TXT
+FC: 找不到差异
+
+正在比较文件 right.txt 和 WRONG.TXT
+FC: 找不到差异
+
+正在比较文件 right.txt 和 WRONG.TXT
+***** right.txt
+OK
+OK
+***** WRONG.TXT
+OK
+ERR
+*****
+
+text 1 :Accepted; yes:63ms wrong:37ms
+text 2 :Accepted; yes:51ms wrong:37ms
+text 3 :Accepted; yes:50ms wrong:37ms
+text 4 :Accepted; yes:51ms wrong:36ms
+text 5 :Accepted; yes:60ms wrong:45ms
+text 6 :Accepted; yes:55ms wrong:40ms
+text 7 :Accepted; yes:60ms wrong:42ms
+text 8 :Accepted; yes:47ms wrong:36ms
+text 9 :Accepted; yes:51ms wrong:40ms
+text 10 :Accepted; yes:58ms wrong:40ms
+text 11 :Accepted; yes:55ms wrong:37ms
+text 12 :Accepted; yes:51ms wrong:37ms
+text 13 :Accepted; yes:63ms wrong:42ms
+text 14 :Accepted; yes:50ms wrong:35ms
+text 15 :Accepted; yes:52ms wrong:37ms
+text 16 :Accepted; yes:55ms wrong:35ms
+text 17 :Accepted; yes:54ms wrong:35ms
+text 18 :Accepted; yes:52ms wrong:43ms
+text 19 :Accepted; yes:57ms wrong:38ms
+text 20 :Accepted; yes:53ms wrong:36ms
+text 21 :Accepted; yes:50ms wrong:36ms
+text 22 :Accepted; yes:54ms wrong:36ms
+text 23 :Accepted; yes:53ms wrong:37ms
+text 24 :Accepted; yes:49ms wrong:35ms
+text 25 :Accepted; yes:50ms wrong:39ms
+text 26 :Accepted; yes:50ms wrong:37ms
+text 27 :Accepted; yes:48ms wrong:37ms
+text 28 :Accepted; yes:52ms wrong:36ms
+text 29 :Accepted; yes:52ms wrong:35ms
+text 30 :Accepted; yes:50ms wrong:37ms
+text 31 :Accepted; yes:48ms wrong:33ms
+text 32 :Accepted; yes:50ms wrong:39ms
+text 33 :Accepted; yes:53ms wrong:40ms
+text 34 :Accepted; yes:50ms wrong:36ms
+text 35 :Accepted; yes:50ms wrong:39ms
+text 36 :Accepted; yes:49ms wrong:40ms
+text 37 :Accepted; yes:50ms wrong:37ms
+text 38 :Accepted; yes:49ms wrong:39ms
+text 39 :Wrong Answer
