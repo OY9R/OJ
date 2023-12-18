@@ -1,0 +1,2 @@
+X关于置换群G的轨道数，等于G中每个置换下不动点的个数的算术平均数
+https://www.cnblogs.com/cyx0406/p/burnside_and_polya.html

@@ -1,0 +1,7 @@
+对拍流程
+MakeData.exe >> Data.in
+Data.in >> 1.exe >> 1.out
+Data.in >> 2.exe >> 2.out
+diff 1.out 2.out
+准备工作
+写好文件输入输出的MakeData.cpp 1.cpp 2.cpp并编译 运行duipai.bat

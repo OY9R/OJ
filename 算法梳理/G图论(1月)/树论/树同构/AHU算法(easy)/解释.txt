@@ -1,0 +1,2 @@
+blog:https://www.cnblogs.com/black-swallow/p/16511234.html
+map<vector<int,int>,int>即map存(子树编号vector)的暴力判树同构方式

@@ -85,7 +85,20 @@
         "xlocinfo": "cpp",
         "ios": "cpp",
         "stop_token": "cpp",
-        "xiosbase": "cpp"
+        "xiosbase": "cpp",
+        "compare": "cpp",
+        "concepts": "cpp",
+        "locale": "cpp",
+        "xfacet": "cpp",
+        "xlocale": "cpp",
+        "xlocbuf": "cpp",
+        "xlocmes": "cpp",
+        "xlocmon": "cpp",
+        "xlocnum": "cpp",
+        "xloctime": "cpp",
+        "xmemory": "cpp",
+        "xstddef": "cpp",
+        "xtr1common": "cpp"
     },
     "C_Cpp.errorSquiggles": "Disabled",
     "cph.general.onceMaintainerMessage": false
